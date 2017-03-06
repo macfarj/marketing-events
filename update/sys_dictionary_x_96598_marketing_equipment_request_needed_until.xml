@@ -31,7 +31,7 @@
         <element>needed_until</element>
         <element_reference>false</element_reference>
         <foreign_database/>
-        <internal_type display_value="">glide_date_time</internal_type>
+        <internal_type display_value="">glide_date</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_96598_marketing_equipment_request</name>
@@ -51,9 +51,9 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-03-06 17:45:52</sys_created_on>
+        <sys_created_on>2017-03-06 19:21:16</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
-        <sys_id>ac367116db913200f594d360cf9619ab</sys_id>
+        <sys_id>e86c4652dbd13200f594d360cf96194d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Needed until</sys_name>
         <sys_package display_value="Marketing Events" source="x_96598_marketing">d94aa15edb513200f594d360cf96194b</sys_package>
@@ -62,7 +62,7 @@
         <sys_scope display_value="Marketing Events">d94aa15edb513200f594d360cf96194b</sys_scope>
         <sys_update_name>sys_dictionary_x_96598_marketing_equipment_request_needed_until</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-03-06 17:45:52</sys_updated_on>
+        <sys_updated_on>2017-03-06 19:21:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
