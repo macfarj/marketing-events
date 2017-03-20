@@ -22,24 +22,19 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[(function executeUIAction(current, previous) {
-	var cost = 0;
-	var budget = current.budget;
-	var mrkevent = current.sys_id;
-	var evtname = current.name;
-	//Get the total cost of all equipment for this event
-	var equipment = new GlideRecord('x_96598_marketing_equipment_request');
-	equipment.addQuery('marketing_event', mrkevent);
-	equipment.query();
-	while(equipment.next()){
-		cost = cost + parseFloat(equipment.cost.getCurrencyValue());
-	}
-	//Display cost and budget error
-	gs.addInfoMessage('The total cost of ' + evtname + ' is ' + cost + '.');
-	if(cost > budget){
-		gs.addErrorMessage('Equipment costs for ' + evtname + ' exceed the event budget.');
-	}
-	action.setRedirectURL(current);
-}(current, typeof previous != 'undefined' ?  previous : null));]]></script>
+var budget = current.budget;
+var mrkevent = current.sys_id;
+var evtname = current.name;
+//Get the total cost of equipment for this event
+var equipment = new totalCost(mrkevent);
+var cost = equipment.getCost();
+gs.addInfoMessage('The total cost of ' + evtname + ' is ' + cost + '.');
+//Compare cost to budget
+if(cost > budget){
+    gs.addErrorMessage('Equipment costs for ' + evtname + ' exceed the event budget.');
+}
+action.setRedirectURL(current);
+})(current, typeof previous != 'undefined' ?  previous : null);]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -51,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>33a35da1db6d7200f594d360cf961939</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Show event cost</sys_name>
         <sys_overrides/>
         <sys_package display_value="Marketing Events" source="x_96598_marketing">d94aa15edb513200f594d360cf96194b</sys_package>
@@ -60,7 +55,7 @@
         <sys_scope display_value="Marketing Events">d94aa15edb513200f594d360cf96194b</sys_scope>
         <sys_update_name>sys_ui_action_33a35da1db6d7200f594d360cf961939</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-03-16 17:37:17</sys_updated_on>
+        <sys_updated_on>2017-03-20 16:19:34</sys_updated_on>
         <table>x_96598_marketing_marketing_event</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

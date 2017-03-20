@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>Neutral</display>
+        <metric/>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-03-20 17:10:56</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>42e4bdb6dba13200f594d360cf961968</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Neutral</sys_name>
+        <sys_package display_value="Marketing Events" source="x_96598_marketing">d94aa15edb513200f594d360cf96194b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Marketing Events">d94aa15edb513200f594d360cf96194b</sys_scope>
+        <sys_update_name>asmt_metric_definition_42e4bdb6dba13200f594d360cf961968</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-03-20 17:10:56</sys_updated_on>
+        <unselected_image/>
+        <value>3</value>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=42e4bdb6dba13200f594d360cf961968"/>
+</record_update>

@@ -29,19 +29,15 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-   //This function will be automatically called when this rule is processed.
-    var cost = 0;
+  //This function will be automatically called when this rule is processed.
     var budget = current.budget;
     var mrkevent = current.sys_id;
     var evtname = current.name;
-    //Get the total cost of all equipment for this event
-    var equipment = new GlideRecord('x_96598_marketing_equipment_request');
-    equipment.addQuery('marketing_event', mrkevent);
-    equipment.query();
-    while(equipment.next()){
-        cost = cost + parseFloat(equipment.cost.getCurrencyValue() );
-    }
+    //Get the total cost of equipment for this event
+    var equipment = new totalCost(mrkevent);
+    var cost = equipment.getCost();
     gs.addInfoMessage('The total cost of ' + evtname + ' is ' + cost + '.');
+    //Compare cost to budget
     if(cost > budget){
         gs.addErrorMessage('Equipment costs for ' + evtname + ' exceed the event budget.');
     }
@@ -53,7 +49,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ef464532db613200f594d360cf961928</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Calculate total cost</sys_name>
         <sys_overrides/>
         <sys_package display_value="Marketing Events" source="x_96598_marketing">d94aa15edb513200f594d360cf96194b</sys_package>
@@ -62,7 +58,7 @@
         <sys_scope display_value="Marketing Events">d94aa15edb513200f594d360cf96194b</sys_scope>
         <sys_update_name>sys_script_ef464532db613200f594d360cf961928</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-03-20 13:52:27</sys_updated_on>
+        <sys_updated_on>2017-03-20 17:07:14</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
