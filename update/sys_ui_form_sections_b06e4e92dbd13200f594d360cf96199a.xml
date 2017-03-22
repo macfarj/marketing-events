@@ -25,7 +25,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_96598_marketing_marketing_event" name="x_96598_marketing_marketing_event" sys_domain="global" view="Default view">b06e4e92dbd13200f594d360cf96199a</sys_ui_form>
-            <sys_ui_section caption="Marketing Event" display_value="Marketing Event" name="x_96598_marketing_marketing_event" sys_domain="global" view="Default view">e06e4e92dbd13200f594d360cf961999</sys_ui_section>
+            <sys_ui_section caption="Coordination" display_value="Coordination" name="x_96598_marketing_marketing_event" sys_domain="global" view="Default view">e06e4e92dbd13200f594d360cf961999</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2017-03-06 19:29:36</sys_updated_on>
         </sys_ui_form_section>
